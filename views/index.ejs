@@ -1,0 +1,36 @@
+
+<%- include("partials/header") %> 
+	
+<div class="container">	
+	<header class="jumbotron">
+		<h1>Welcome to College World!</h1>
+		<p>Discuss about colleges, predict your rank/college</p>
+		<span class="btn btn-success btn-large"><a href="/college/new"> <style>a{text-decoration: none; color:white;} a:hover{text-decoration:none; color:#f2f2f2;}</style>Add College Review</a></span>
+		<span class="btn btn-primary btn-large"><a href="/predict"> <style>a{text-decoration: none; color:white;} a:hover{text-decoration:none; color:#f2f2f2;}</style>College Predictor</a></span>
+		<span class="btn btn-primary btn-large"><a href="/rank"> <style>a{text-decoration: none; color:white;} a:hover{text-decoration:none; color:#f2f2f2;}</style> Rank Predictor</a></span>
+	</header>
+
+
+	<div class="row" style="display:flex; flex-wrap:wrap;">
+		
+		<% x.forEach(function(x1){ %>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="thumbnail" style="text-align:center;">
+					
+					<img src="<%= x1.image %>">	
+					<div class="caption">
+						<h4><%= x1.name%></h4>
+					</div>
+					<p >
+						<a href="/college/<%= x1._id%>" class="btn btn-primary"> More Info</a>
+					</p>
+
+				</div>
+			</div>
+
+		<% }); %>
+	</div>		
+</div>
+
+<%- include("partials/footer") %>

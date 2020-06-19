@@ -1,0 +1,31 @@
+
+<%- include("partials/header") %> 
+
+<div class="container">
+<div class="row">
+<h2 style="text-align:center; color:white; font-family:arial;">Edit <%= clg.name %></h2>
+<div style="width:30%; margin:0 auto;">
+	<form action="/college/<%= clg._id %>?_method=PUT" method="POST">
+	<div class="form-group">	
+	<input class="form-control"type="text" name="clg[name]" value="<%= clg.name %>">
+	</div>
+	<div class="form-group">	
+	<input class="form-control" type="text" name="clg[image]" value="<%= clg.image %>">
+	</div>
+	<div class="form-group">	
+	<input class="form-control" type="text" name="clg[description]" value= "<%= clg.description %>" >
+	</div>
+	<div class="form-group">	
+	<input class="btn btn-lg btn-default btn-block" type="submit">
+	</div>
+	</form>
+</div>
+</div>
+</div>
+
+<div>
+<a href="/college">back</a>
+</div>
+</div>
+
+<%- include("partials/footer") %> 

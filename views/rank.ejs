@@ -1,0 +1,73 @@
+<%- include("partials/header") %> 
+
+<style type="text/css">
+
+	.new{
+
+		background: white;
+		width:60%;
+		margin: auto;
+
+	}
+
+</style>	
+
+
+
+<div class="container new" style="border-radius:40px;">
+	<h1>JEE Mains Rank Predictor</h1>
+    <em>this rank predictor gives you the possible rank range according to the previous year data.</em>
+	<hr>
+	<div class="contain" >
+	  <span class="input-group-addon">Marks out of 360</span>
+
+		<input type="text" name="rank" class="rankofstu form-control" placeholder="Enter your marks of 360">
+	  <span class="input-group-addon">Jee Mains 2020</span>
+
+		<button class="btn btn-warning">Predict Your Rank</button>
+		<hr>
+		<div>
+			<div class="alert alert-warning" id="display" role="alert">Your Rank Range</div>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+var x=document.querySelector(".rankofstu");
+var y=document.querySelector(".btn");
+var dis=document.querySelector("#display");
+
+y.addEventListener("click",function(){
+
+	var r=Number(x.value);
+	if(r>360)
+	{
+		dis.textContent="marks out of 360";
+	}else if(r>335)
+	{
+		dis.textContent="1-20";
+	}else if(r<=335 && r>312){
+		dis.textContent="21-100";
+	}else if(r<=312 && r>295){
+		dis.textContent="101-500";	
+	}else if(r<=295 && r>280){
+		dis.textContent="501-1000";
+	}else if(r<=280 && r>260){
+		dis.textContent="1001-2000";	
+	}else if(r<=260 && r>210){
+		dis.textContent="2001-5000";		
+	}else if(r<=210 && r>177){
+		dis.textContent="5001-7500";			
+	}else if(r<=177 && r>150){
+		dis.textContent="7501-10000";
+	}else if(r<=150 && r>120){
+		dis.textContent="10001-15000";		
+	}else{
+		dis.textContent=">15000";
+	}
+
+
+});	</script>
+
+
+<%- include("partials/footer") %> 

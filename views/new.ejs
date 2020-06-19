@@ -1,0 +1,32 @@
+
+
+<%- include("partials/header") %> 
+
+<div class="container">
+<div class="row">
+<h2 style="text-align:center; color:white; font-family:arial;">This is to add review</h2>
+<div style="width:30%; margin:0 auto;">
+	<form action="/college" method="POST">
+	<div class="form-group">	
+	<input class="form-control"type="text" name="name" placeholder="name">
+	</div>
+	<div class="form-group">	
+	<input class="form-control" type="text" name="image" placeholder="image-url">
+	</div>
+	<div class="form-group">	
+	<input class="form-control" type="text" name="description" placeholder="description">
+	</div>
+	<div class="form-group">	
+	<input class="btn btn-lg btn-default btn-block" type="submit">
+	</div>
+	</form>
+</div>
+</div>
+</div>
+
+<div>
+<a href="/college">back</a>
+</div>
+</div>
+
+<%- include("partials/footer") %> 

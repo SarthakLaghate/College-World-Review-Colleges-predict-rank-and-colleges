@@ -1,0 +1,17 @@
+body{
+
+	padding: 5px;
+	font-family: 'Cabin', sans-serif;
+}
+
+.thumbnail{
+	padding: 0;
+	}
+
+.thumbnail img{
+
+	width: 100%;
+}
+
+
+
